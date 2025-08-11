@@ -1,10 +1,75 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
+import { Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/nav";
+import Footer from "@/components/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const satoshi = localFont({
+  variable: "--font-satoshi",
+  display: "swap",
+  preload: true,
+  fallback: [
+    "system-ui",
+    "Segoe UI",
+    "Roboto",
+    "Helvetica Neue",
+    "Arial",
+    "Noto Sans",
+    "sans-serif",
+  ],
+  src: [
+    {
+      path: "../public/fonts/satoshi/Satoshi-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/satoshi/Satoshi-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/satoshi/Satoshi-Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/satoshi/Satoshi-Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/satoshi/Satoshi-Black.otf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/satoshi/Satoshi-LightItalic.otf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/satoshi/Satoshi-Italic.otf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/satoshi/Satoshi-MediumItalic.otf",
+      weight: "500",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/satoshi/Satoshi-BoldItalic.otf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/satoshi/Satoshi-BlackItalic.otf",
+      weight: "900",
+      style: "italic",
+    },
+  ],
 });
 
 const geistMono = Geist_Mono({
@@ -24,11 +89,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${satoshi.variable} ${geistMono.variable} antialiased font-sans`}>
+        <div className="min-h-screen flex flex-col">
+          <header className="w-full">
+            <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-4">
+              <Nav />
+            </div>
+          </header>
+
+          <main className="flex-1 w-full">
+            <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-6">
+              {children}
+            </div>
+          </main>
+
+          <footer className="w-full mt-auto">
+            <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-8">
+              <Footer />
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   );
-}
+}   
