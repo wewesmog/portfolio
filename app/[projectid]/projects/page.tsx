@@ -8,8 +8,9 @@ import ProjectsComponent from "@/components/projects";
 import { getTechIcon } from "@/lib/tech-icons";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
-export default function Projects({ params }: { params: { projectid: string } }) {
-    const project = projects.find((p) => p.id === Number(params.projectid));
+export default async function Projects({ params }: { params: Promise<{ projectid: string }> }) {
+    const { projectid } = await params;
+    const project = projects.find((p) => p.id === Number(projectid));
     if (!project) {
         notFound();
     }
@@ -65,8 +66,13 @@ export default function Projects({ params }: { params: { projectid: string } }) 
               <div className="w-full md:w-1/4">
                 <div className="flex flex-col gap-2 border-2 border-gray-200 rounded-lg p-4 mr-10 mt-36">
                   <p className="text-lg text-gray-500 mb-10">
-                    <span className="font-bold">Delivered on:</span> {project.date}
+                    <span className="font-bold">Status:</span> {project.status}
                   </p>
+                  {project.date ? (
+                    <p className="text-lg text-gray-500 mb-10">
+                      <span className="font-bold">Delivered on:</span> {project.date}
+                    </p>
+                  ) : null}
                   <p className="text-lg text-gray-500 mb-10">
                     <span className="font-bold">My Role:</span> {project.myRole}
                   </p>
@@ -142,7 +148,7 @@ export default function Projects({ params }: { params: { projectid: string } }) 
               </div>
             </div>
             <h1 className="text-6xl font-extrabold mb-6 mt-10">Other Projects<span className="text-primary mb-2">.</span></h1>
-              <ProjectsComponent ProjectsToShow={projects.filter((p) => p.id !== Number(params.projectid))} showTitle={false} />
+              <ProjectsComponent ProjectsToShow={projects.filter((p) => p.id !== Number(projectid))} showTitle={false} />
         </div>
        
        

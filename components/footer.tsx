@@ -14,7 +14,7 @@ export default function Footer() {
              <div className="flex gap-4  text-xl font-semibold items-center">
                 <Link href="/">Home</Link>
                 <Link href="/projects">Projects</Link>
-                <Link href="/about">About</Link>
+                <Link href="/#story">About</Link>
                 </div>
             
             <div>
@@ -33,7 +33,7 @@ export default function Footer() {
                 <h2 className="text-2xl font-bold mb-4"> Interested in working together? </h2>
                <div className="flex gap-2 w-full justify-between">
                 <Button variant="outline">Contact me</Button>
-                <Button variant="default">Download CV</Button>
+                <Button variant="default">See my work</Button>
                </div>
                 
                 </div>
