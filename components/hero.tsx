@@ -15,7 +15,7 @@ export default function Hero() {
             <p className="text-xl leading-loose">I design and build AI‑powered products with customer obsession—turning lifecycle insight into experiences that grow revenue and retention end‑to‑end.</p>
 
             <div className="flex gap-2 w-full justify-between mt-10">
-                <Button variant="outline" size="lg" onClick={() => router.push("/contact")}>Let's talk</Button>
+                <Button variant="outline" size="lg" onClick={() => router.push("/contact")}>Let&apos;s talk</Button>
                 <Button variant="default" size="lg" onClick={() => router.push("/#projects")}>See my work</Button>
                </div>
             </div>

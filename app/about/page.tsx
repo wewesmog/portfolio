@@ -1,5 +1,4 @@
 //About page
-import { Separator } from "@/components/ui/separator";
 import Story from "@/components/story";
 import { getTechIcon } from "@/lib/tech-icons";
 import React from "react";
@@ -15,7 +14,7 @@ export default function About() {
     return (
         <div className="flex flex-col gap-5 mb-30 mt-10">
       
-            <h1 className="text-8xl font-extrabold mb-4">About Me<span className="text-primary mb-2">.</span></h1>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-4">About Me<span className="text-primary mb-2">.</span></h1>
 {/* My stack */}
             <div className="flex flex-wrap gap-4 justify-start">
                 {techIcons.map((tech) => (
@@ -35,7 +34,7 @@ export default function About() {
                     </div>
                 ))}
             </div>
-            <p className=" border-l-8 border-primary pl-4 py-2 text-xl text-gray-900">I'm a n end to end AI Applications Developer as well as product manager. I marry business needs with advanced AI Solutions.</p>
+            <p className=" border-l-8 border-primary pl-4 py-2 text-xl text-gray-900">I&apos;m an end to end AI Applications Developer as well as product manager. I marry business needs with advanced AI Solutions.</p>
           <div className="flex flex-col mt-30">
            <Story />
           </div>

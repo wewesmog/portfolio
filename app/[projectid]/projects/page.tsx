@@ -2,7 +2,6 @@
 
 import { projects } from "@/app/data/projects_data";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { notFound } from "next/navigation";
 import ProjectsComponent from "@/components/projects";
 import { getTechIcon } from "@/lib/tech-icons";

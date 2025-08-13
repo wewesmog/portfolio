@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Plus } from "lucide-react";
 import Hero from "@/components/hero";
@@ -9,7 +8,6 @@ import Skills from "@/components/skills";
 import Story from "@/components/story";
 import { projects } from "./data/projects_data";
 import { useRouter } from "next/navigation";
-import { ArrowRight, Eye } from "lucide-react";
 
 
 export default function Home() {
