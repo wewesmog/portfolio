@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="flex flex-col-reverse md:flex-row gap-10 items-center justify-center mb-24 mt-10">
             <div className="flex flex-col gap-4 h-full justify-between w-full">
             <p className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-2">Get in <span className="text-primary mb-2">Touch</span></p>
-            <p className="text-xl leading-relaxed whitespace-normal break-words">Let's discuss your AI needs and how I can help you bring your ideas to life.</p>
+            <p className="text-xl leading-relaxed whitespace-normal break-words">Let&apos;s discuss your AI needs and how I can help you bring your ideas to life.</p>
 
             <div className="flex flex-col gap-2 w-full justify-between mt-10 text-xl">
                <div className="flex gap-2 items-center">

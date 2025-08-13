@@ -1,9 +1,7 @@
 // footer component
 
 import Link from "next/link";
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram,  } from "react-icons/fa";
 import { Button } from "./ui/button";
-import { Separator } from "./ui/separator";
 
 
 export default function Footer() {
