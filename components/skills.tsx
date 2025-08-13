@@ -43,7 +43,7 @@ import { FaCheck } from "react-icons/fa";
 export default function Skills() {
     return (
             <section className="w-full mb-12 space-y-8" aria-labelledby="skills-heading">
-            <h2 id="skills-heading" className="font-heading text-6xl font-extrabold mb-10">Skills<span className="text-primary">.</span></h2>
+            <h2 id="skills-heading" className="font-heading text-5xl sm:text-6xl font-extrabold mb-10">Skills<span className="text-primary">.</span></h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {skills.map((skill) => (
                     <Card key={skill.name} className="shadow-none border-none">

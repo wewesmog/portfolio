@@ -5,7 +5,7 @@
 export default function Skills() {
     return (
             <section id="story" className="scroll-mt-20 w-full mb-12 space-y-8" aria-labelledby="story-heading">
-                <h2 id="story-heading" className="font-heading text-6xl font-extrabold mb-6">My Story<span className="text-primary mb-10">.</span></h2>
+                <h2 id="story-heading" className="font-heading text-5xl sm:text-6xl font-extrabold mb-6">My Story<span className="text-primary mb-10">.</span></h2>
                 <div className="space-y-6 text-lg text-gray-600">
                   <p className="leading-relaxed">
                     My background is in business and customer value management across fintech and telecommunications. I’ve led

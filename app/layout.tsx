@@ -22,13 +22,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${heading.variable} ${body.variable} ${mono.variable} antialiased font-sans`}>
         <div className="min-h-screen flex flex-col">
-          <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <header className="fixed top-0 left-0 right-0 z-50 w-full bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b">
             <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-4">
               <Nav />
             </div>
           </header>
 
-          <main className="flex-1 w-full">
+          <main className="flex-1 w-full pt-20">
             <div className="mx-auto w-full max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-6">
               {children}
             </div>

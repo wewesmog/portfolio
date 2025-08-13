@@ -130,7 +130,7 @@ export default function Experience() {
 
   return (
     <section className="w-full mb-12 space-y-8" aria-labelledby="experience-heading">
-    <h2 id="experience-heading" className="font-heading text-6xl font-extrabold mb-10">Experience<span className="text-primary mb-2">.</span></h2>
+    <h2 id="experience-heading" className="font-heading text-5xl sm:text-6xl font-extrabold mb-10">Experience<span className="text-primary mb-2">.</span></h2>
       <Tabs
       value={value}
       onValueChange={setValue}

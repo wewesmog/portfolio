@@ -115,12 +115,22 @@ html { scroll-behavior: smooth; }
 
 
 @layer base {
+  html { @apply overflow-x-hidden; }
   * {
     @apply border-border outline-ring/50;
+    box-sizing: border-box;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
   }
+  /* Make media scale within containers */
+  img, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  /* Force long text (URLs, tokens) to wrap to new lines */
+  p, a, li, h1, h2, h3, h4, h5, h6 { overflow-wrap: anywhere; word-break: break-word; }
   /* Improve readability site-wide */
   p {
     @apply leading-relaxed;

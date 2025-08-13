@@ -26,7 +26,7 @@ export default function Projects({
   return (
     <section id="projects" className="w-full mb-12 space-y-8" aria-labelledby="projects-heading">
       {showTitle && (
-        <h2 id="projects-heading" className="font-heading text-6xl font-extrabold mb-6">
+        <h2 id="projects-heading" className="font-heading text-5xl sm:text-6xl font-extrabold mb-6">
           Projects<span className="text-primary mb-2">.</span>
         </h2>
       )}
