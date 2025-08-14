@@ -10,7 +10,7 @@ export default function Hero() {
     return (
         <div className="flex flex-col-reverse md:flex-row gap-10 items-center justify-center mb-24 mt-10">
             <div className="flex flex-col gap-4 h-full justify-between w-full">
-            <h1 className="text-4xl  mb-6 text-gray-400">Jambo, Wes here <span className="text-primary">👋</span></h1>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-gray-400">Jambo, Wes here <span className="text-primary">👋</span></h1>
             <p className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-2">AI Product <span className="text-primary mb-2">Engineer</span></p>
             <p className="text-xl leading-loose">I design and build AI‑powered products with customer obsession—turning lifecycle insight into experiences that grow revenue and retention end‑to‑end.</p>
 

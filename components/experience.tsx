@@ -3,6 +3,7 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import React from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 type Experience = {
   company: string;
@@ -106,6 +107,7 @@ const experiences: Experience[] = [
 ];
 
 export default function Experience() {
+  const router = useRouter();
   const tabValues = experiences.map((experience) => ({
     value: experience.company,
     label: experience.company,
@@ -129,7 +131,7 @@ export default function Experience() {
   };
 
   return (
-    <section className="w-full mb-12 space-y-8" aria-labelledby="experience-heading">
+    <section id="experience" className="w-full mb-12 space-y-8" aria-labelledby="experience-heading">
     <h2 id="experience-heading" className="font-heading text-5xl sm:text-6xl font-extrabold mb-10">Experience<span className="text-primary mb-2">.</span></h2>
       <Tabs
       value={value}
@@ -184,7 +186,7 @@ export default function Experience() {
           {!isFirst ? (
             <button
               type="button"
-              onClick={goPrev}
+              onClick={() => {goPrev(); router.push("/#experience")}}
               aria-label="Previous experience"
               className="inline-flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors"
             >
@@ -197,7 +199,7 @@ export default function Experience() {
           {!isLast ? (
             <button
               type="button"
-              onClick={goNext}
+              onClick={() => {goNext(); router.push("/#experience")}}
               aria-label="Next experience"
               className="inline-flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors"
             >
