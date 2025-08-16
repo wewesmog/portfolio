@@ -12,7 +12,7 @@ export default function Hero() {
             <div className="flex flex-col gap-4 h-full justify-between w-full">
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 text-gray-400">Jambo, Wes here <span className="text-primary">👋</span></h1>
             <p className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-2">AI Product <span className="text-primary mb-2">Engineer</span></p>
-            <p className="text-xl leading-loose">I design and build AI‑powered products with customer obsession—turning lifecycle insight into experiences that grow revenue and retention end‑to‑end.</p>
+            <p className="text-x leading-loose">I design and build AI‑powered products with customer obsession—turning lifecycle insight into experiences that grow revenue and retention end‑to‑end.</p>
 
             <div className="flex gap-2 w-full justify-between mt-10">
                 <Button variant="outline" size="lg" onClick={() => router.push("/contact")}>Let&apos;s talk</Button>
