@@ -23,6 +23,73 @@ type Project = {
 export const projects: Project[] =[
   {
     "id": 1,
+    "title": "Trivia Pals — Social Trivia Gaming Platform",
+    "description": "Real-time multiplayer trivia platform with AI-powered question generation, live leaderboards, and social gaming features.",
+    "status": "live",
+    "image": "/images/trivia-pals.png",
+    "link": "https://github.com/wewesmog/trivia",
+    "about": "Trivia Pals is a modern, social trivia gaming platform that brings friends together through real-time multiplayer trivia games. Built with Next.js and FastAPI, it features AI-generated questions, live leaderboards, attempt tracking, and a beautiful responsive UI that works seamlessly across devices.",
+    "problemStatement": "Traditional trivia apps lack social interaction, real-time multiplayer capabilities, and engaging user experiences that keep players coming back for more.",
+    "Solution": [
+      "Real-time multiplayer trivia games with live leaderboards and player tracking",
+      "AI-powered question generation for dynamic, fresh content",
+      "Comprehensive attempt history and performance analytics",
+      "Responsive design with mobile-first approach and beautiful UI/UX",
+      "Social features including game sharing, player profiles, and achievement tracking",
+      "Advanced pagination and filtering for large game libraries"
+    ],
+    "Technologies": [
+      "Next.js 15",
+      "React 18",
+      "TypeScript",
+      "Tailwind CSS",
+      "FastAPI",
+      "PostgreSQL",
+      "Supabase (Auth & Database)",
+      "Vercel (Deployment)",
+      "OpenAI API",
+      "Lucide React (Icons)",
+      "Radix UI (Components)"
+    ],
+    "Results": [
+      "Real-time multiplayer functionality with live score updates",
+      "Responsive design supporting mobile, tablet, and desktop",
+      "Comprehensive game history with attempt tracking and analytics",
+      "Modern UI with smooth animations and intuitive navigation",
+      "Scalable architecture supporting multiple concurrent games"
+    ],
+    "Challenges": [
+      "Implementing real-time multiplayer synchronization across devices",
+      "Designing responsive UI that works seamlessly on all screen sizes",
+      "Optimizing performance for large game libraries with pagination",
+      "Creating intuitive user flows for both hosts and players",
+      "Ensuring consistent state management across complex game interactions"
+    ],
+    "lessonsLearned": [
+      "Component-based architecture with proper separation of concerns improves maintainability",
+      "Responsive design with mobile-first approach enhances user experience significantly",
+      "Proper error handling and loading states are crucial for user trust",
+      "TypeScript provides excellent developer experience and reduces runtime errors",
+      "Vercel deployment with automatic CI/CD streamlines the development process"
+    ],
+    "futureImprovements": [
+      "Voice chat integration for enhanced social interaction",
+      "Custom trivia categories and difficulty levels",
+      "Tournament mode with brackets and elimination rounds",
+      "Achievement system with badges and rewards",
+      "Integration with social media platforms for game sharing",
+      "Advanced analytics dashboard for game hosts"
+    ],
+    "otherPics": [
+      "/images/trivia-pals 2.png",
+      "/images/trivia-pals 3.png",
+      "/images/trivia-pals 4.png"
+    ],
+    "date": "2024-12-01",
+    "myRole": "Full-Stack Developer"
+  },
+  {
+    "id": 2,
     "title": "Maswali — AI‑Powered Trivia Platform",
     "description": "Gamified learning with dynamic, adaptive trivia powered by LangGraph + OpenAI.",
     "status": "live",
@@ -66,14 +133,13 @@ export const projects: Project[] =[
       "Offline play with local caching"
     ],
     "otherPics": [
-      "/images/p1_screenshot1.png",
-      "/images/p1_screenshot2.png"
+   
     ],
     "date": "",
     "myRole": "Full‑stack / AI Product Engineer"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "Mwalimu — AI Financial Advisory Chatbot",
     "description": "POC advisor delivering personalized money guidance via LangChain/LangGraph + Groq.",
       "status": "pilot",
@@ -116,14 +182,13 @@ export const projects: Project[] =[
       "A/B tested nudges to improve adherence"
     ],
     "otherPics": [
-      "/images/p2_screenshot1.png",
-      "/images/p2_screenshot2.png"
+
     ],
     "date": "2024-08-15",
     "myRole": "AI Product Engineer"
   },
   {
-    "id": 3,
+    "id": 4,
     "title": "Brand Experience Meter",
     "description": "Real‑time customer sentiment tracker using LLMs + FastAPI with a React dashboard.",
       "status": "pilot",
@@ -164,8 +229,7 @@ export const projects: Project[] =[
       "Slack/Teams push alerts"
     ],
     "otherPics": [
-      "/images/p3_screenshot1.png",
-      "/images/p3_screenshot2.png"
+   
     ],
     "date": "2024-06-01",
     "myRole": "Product & Engineering"
