@@ -27,7 +27,7 @@ export const projects: Project[] =[
     "description": "Real-time multiplayer trivia platform with AI-powered question generation, live leaderboards, and social gaming features.",
     "status": "live",
     "image": "/images/trivia-pals.png",
-    "link": "https://github.com/wewesmog/trivia",
+    "link": "https://www.triviapals.com",
     "about": "Trivia Pals is a modern, social trivia gaming platform that brings friends together through real-time multiplayer trivia games. Built with Next.js and FastAPI, it features AI-generated questions, live leaderboards, attempt tracking, and a beautiful responsive UI that works seamlessly across devices.",
     "problemStatement": "Traditional trivia apps lack social interaction, real-time multiplayer capabilities, and engaging user experiences that keep players coming back for more.",
     "Solution": [
@@ -88,56 +88,7 @@ export const projects: Project[] =[
     "date": "2024-12-01",
     "myRole": "Full-Stack Developer"
   },
-  {
-    "id": 2,
-    "title": "Maswali — AI‑Powered Trivia Platform",
-    "description": "Gamified learning with dynamic, adaptive trivia powered by LangGraph + OpenAI.",
-    "status": "live",
-      "image": "/images/p1.jpeg",
-    "link": "https://github.com/yourname/maswali",
-    "about": "Maswali is a trivia and practice platform that generates fresh, level‑appropriate questions on the fly. Using LangGraph to orchestrate content flows, it adapts difficulty, offers hints, and tracks mastery—keeping learners engaged while reinforcing knowledge over time.",
-    "problemStatement": "Static question banks get stale quickly and don’t adapt to learner progress, leading to poor engagement and limited retention.",
-    "Solution": [
-      "LangGraph flow orchestrates question generation, validation, and scoring",
-      "Adaptive difficulty based on recent performance and mastery gaps",
-      "Hinting and explanations generated per question to reinforce concepts",
-      "Leaderboards, streaks, and XP for sustained motivation",
-      "Admin tools to seed topics, constraints, and syllabus coverage"
-    ],
-    "Technologies": [
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-      "TypeScript",
-      "FastAPI",
-      "PostgreSQL",
-      "OpenAI",
-      "LangGraph"
-    ],
-    "Results": [
-      "Session length +28% versus static quiz baseline",
-      "Repeat play increased by 2.1× with streak incentives",
-      "Question rejection rate < 3% after validator tuning"
-    ],
-    "Challenges": [
-      "Guarding against repetitive or low‑quality generations",
-      "Balancing difficulty progression without frustrating learners"
-    ],
-    "lessonsLearned": [
-      "Small rubric‑based validators dramatically improve question quality",
-      "Mixing retrieval and generation produces more grounded explanations"
-    ],
-    "futureImprovements": [
-      "Multiplayer rooms and live tournaments",
-      "Topic coverage dashboards for teachers",
-      "Offline play with local caching"
-    ],
-    "otherPics": [
-   
-    ],
-    "date": "",
-    "myRole": "Full‑stack / AI Product Engineer"
-  },
+  
   {
     "id": 3,
     "title": "Mwalimu — AI Financial Advisory Chatbot",
