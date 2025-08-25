@@ -55,6 +55,9 @@ export default function Projects({
                 <CardTitle className="font-heading text-3xl font-extrabold flex items-center gap-2 mb-2 text-gray-700">
                   {project.title}
                 </CardTitle>
+                {project.link ? (
+              <Link href={project.link} target="_blank" rel="noopener noreferrer" className="text-lg text-gray-500 mb-10">View Project</Link>
+            ) : null}
                 {project.description ? (
                   <CardDescription className="line-clamp-3 text-lg leading-relaxed">
                     {project.description}

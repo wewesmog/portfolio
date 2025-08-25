@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import ProjectsComponent from "@/components/projects";
 import { getTechIcon } from "@/lib/tech-icons";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import Link from "next/link";
 
 export default async function Projects({ params }: { params: Promise<{ projectid: string }> }) {
     const { projectid } = await params;
@@ -20,7 +21,7 @@ export default async function Projects({ params }: { params: Promise<{ projectid
             </h1>
             <p className="text-lg text-gray-500 mb-10">{project.description}</p>
             {project.link ? (
-              <p className="text-lg text-gray-500 mb-10">{project.link}</p>
+              <Link href={project.link} target="_blank" rel="noopener noreferrer" className="text-lg text-gray-500 mb-10">View Project</Link>
             ) : null}
             <div className="relative aspect-[21/9] w-full mb-6">
               <Image
