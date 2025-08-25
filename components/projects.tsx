@@ -14,6 +14,7 @@ import Link from "next/link";
 import { getTechIcon } from "@/lib/tech-icons";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { EyeIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
 type Project = (typeof projectsData)[number];
 
 export default function Projects({
@@ -54,12 +55,16 @@ export default function Projects({
               </div>
               <CardHeader className="space-y-1">
                 <CardTitle className="font-heading text-3xl font-extrabold flex items-center gap-2 mb-2 text-gray-700">
-                  {project.title}
+                  {project.name}
+                  <span className="text-lg text-gray-500">
+                    - {project.title}
+                  </span>
                 </CardTitle>
                 {project.link ? (
-              <Link href={project.link} className="text-lg text-gray-500 mb-10">
+              <Button variant="outline" className="mb-2" onClick={() => window.open(project.link, '_blank')}>
                 <EyeIcon className="size-5" aria-label="View Project" />
-              </Link>
+                View Project
+              </Button> 
             ) : null}
                 {project.description ? (
                   <CardDescription className="line-clamp-3 text-lg leading-relaxed">

@@ -2,6 +2,7 @@
 
 type Project = {
     id: number;
+    name: string;
     title: string;
     description: string;
     status: "live" | "in progress" | "pilot";
@@ -23,7 +24,8 @@ type Project = {
 export const projects: Project[] =[
   {
     "id": 1,
-    "title": "Trivia Pals — Social Trivia Gaming Platform",
+    "name": "Trivia Pals",
+    "title": "Social Trivia Gaming Platform",
     "description": "Real-time multiplayer trivia platform with AI-powered question generation, live leaderboards, and social gaming features.",
     "status": "live",
     "image": "/images/trivia-pals.png",
@@ -91,7 +93,8 @@ export const projects: Project[] =[
   
   {
     "id": 3,
-    "title": "Mwalimu — AI Educational Tutoring Chatbot",
+    "name": "Mwalimu",
+    "title": "AI Educational Tutoring Chatbot",
     "description": "Intelligent tutoring system for Kenyan students delivering personalized educational content via Telegram with LangGraph multi-agent architecture.",
     "status": "pilot",
     "image": "/images/mwalimus3.png",
@@ -161,7 +164,8 @@ export const projects: Project[] =[
   },
   {
     "id": 4,
-    "title": "Brand Experience Meter",
+    "name": "XPChex",
+    "title": "Customer Sentiment Tracker",
     "description": "Real‑time customer sentiment tracker using LLMs + FastAPI with a React dashboard.",
       "status": "pilot",
       "image": "/images/p3.jpeg",

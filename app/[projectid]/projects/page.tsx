@@ -19,7 +19,7 @@ export default async function Projects({ params }: { params: Promise<{ projectid
 
     return (
         <div>
-            <h1 className="text-6xl font-extrabold mb-6 mt-10">{project.title}<span className="text-primary mb-2">.</span>
+            <h1 className="text-6xl font-extrabold mb-6 mt-10">{project.name}<span className="text-primary mb-2"> - {project.title}</span>
             </h1>
             <p className="text-lg text-gray-500 mb-10">{project.description}</p>
             {project.link ? (
