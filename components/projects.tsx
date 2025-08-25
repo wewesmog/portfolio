@@ -13,6 +13,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getTechIcon } from "@/lib/tech-icons";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { EyeIcon } from "lucide-react";
 type Project = (typeof projectsData)[number];
 
 export default function Projects({
@@ -56,7 +57,9 @@ export default function Projects({
                   {project.title}
                 </CardTitle>
                 {project.link ? (
-              <Link href={project.link} target="_blank" rel="noopener noreferrer" className="text-lg text-gray-500 mb-10">View Project</Link>
+              <Link href={project.link} className="text-lg text-gray-500 mb-10">
+                <EyeIcon className="size-5" aria-label="View Project" />
+              </Link>
             ) : null}
                 {project.description ? (
                   <CardDescription className="line-clamp-3 text-lg leading-relaxed">
