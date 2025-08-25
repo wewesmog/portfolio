@@ -94,7 +94,7 @@ export const projects: Project[] =[
     "title": "Mwalimu — AI Educational Tutoring Chatbot",
     "description": "Intelligent tutoring system for Kenyan students delivering personalized educational content via Telegram with LangGraph multi-agent architecture.",
     "status": "pilot",
-    "image": "/images/mwalimus 2.jpeg",
+    "image": "/images/mwalimus3.png",
     "link": "https://t.me/Mwalimus",
     "about": "Mwalimu (meaning 'teacher' in Swahili) is an AI-powered educational chatbot designed specifically for Kenyan students. It provides interactive tutoring, practice problems, and personalized feedback across subjects like Mathematics, Sciences, Languages, and Social Studies. The system uses a sophisticated multi-agent architecture to deliver grade-appropriate content for both primary (Class 1-8) and secondary (Form 1-4) school students.",
     "problemStatement": "Many Kenyan students lack access to personalized tutoring and struggle with understanding complex subjects without individual guidance. Traditional educational apps often lack cultural relevance and don't adapt to local curriculum requirements.",
