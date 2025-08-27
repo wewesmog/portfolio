@@ -108,7 +108,7 @@ export default function Projects({
                       );
                     })}
                   </ul>
-                ) : null}
+                )}
               </CardHeader>
             </Link>
             <CardContent className="pt-0" />
