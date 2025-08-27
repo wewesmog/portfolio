@@ -169,7 +169,7 @@ export const projects: Project[] =[
     "description": "Real‑time customer sentiment tracker using LLMs + FastAPI with a React dashboard.",
       "status": "pilot",
       "image": "/images/p3.jpeg",
-    "link": "https://github.com/yourname/brand-experience-meter",
+    "link": "",
     "about": "Continuously ingests tickets, surveys, and social mentions; classifies sentiment, tags topics, and surfaces emerging issues in a live dashboard so teams can react fast.",
     "problemStatement": "Customer experience signals live in silos; teams spot issues late, when damage is already done.",
     "Solution": [

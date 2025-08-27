@@ -19,7 +19,7 @@ export default async function Projects({ params }: { params: Promise<{ projectid
 
     return (
         <div>
-            <h1 className="text-6xl font-extrabold mb-6 mt-10">{project.name}<span className="text-primary mb-2"> - {project.title}</span>
+            <h1 className="text-6xl font-extrabold mb-6 mt-10">{project.name} <br /> <span className="text-lg text-gray-500 mb-2"> {project.title}</span>
             </h1>
             <p className="text-lg text-gray-500 mb-10">{project.description}</p>
             {project.link ? (
@@ -27,7 +27,7 @@ export default async function Projects({ params }: { params: Promise<{ projectid
                 <EyeIcon className="size-5" aria-label="View Project" />
                 View Project
               </Button> 
-            ) : null}
+            ) : <p className="text-lg text-gray-500">Coming Soon</p>}
             <div className="relative aspect-[21/9] w-full mb-6">
               <Image
                 src={project.image}
