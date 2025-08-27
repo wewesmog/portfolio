@@ -1,5 +1,7 @@
 // projects details page
 
+"use client"
+
 import { projects } from "@/app/data/projects_data";
 import Image from "next/image";
 import { notFound } from "next/navigation";
@@ -27,7 +29,7 @@ export default async function Projects({ params }: { params: Promise<{ projectid
                 <EyeIcon className="size-5" aria-label="View Project" />
                 View Project
               </Button> 
-            ) : <p className="text-lg text-gray-500">Coming Soon</p>}
+            ) : <p className="text-lg font-medium text-primary/80 inline-flex items-center justify-center px-4 py-2 bg-primary/5 rounded-md border border-primary/20">Coming Soon</p>}
             <div className="relative aspect-[21/9] w-full mb-6">
               <Image
                 src={project.image}

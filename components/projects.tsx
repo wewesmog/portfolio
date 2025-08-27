@@ -53,26 +53,41 @@ export default function Projects({
                   priority={project.id === 1}
                 />
               </div>
-              <CardHeader className="space-y-1">
-                <CardTitle className="font-heading text-3xl font-extrabold flex items-center gap-2 mb-2 text-gray-700">
-                  {project.name}<br />  
-                  <span className="text-lg text-gray-500">
+              <CardHeader className="space-y-4">
+                <div className="min-h-[80px]">
+                  <CardTitle className="font-heading text-3xl font-extrabold text-gray-700">
+                    {project.name}
+                  </CardTitle>
+                  <span className="text-lg text-gray-500 block mt-1">
                     {project.title}
                   </span>
-                </CardTitle>
-                {project.link ? (
-              <Button variant="outline" className="mb-2" onClick={() => window.open(project.link, '_blank')}>
-                <EyeIcon className="size-5" aria-label="View Project" />
-                View Project
-              </Button> 
-            ) : null}
-                {project.description ? (
-                  <CardDescription className="line-clamp-3 text-lg leading-relaxed">
+                </div>
+                
+                <div className="h-[40px]">
+                  {project.link ? (
+                    <Button 
+                      variant="outline" 
+                      className="w-full"
+                      onClick={() => window.open(project.link, '_blank')}
+                    >
+                      <EyeIcon className="size-5 mr-2" aria-label="View Project" />
+                      View Project
+                    </Button> 
+                  ) : (
+                    <p className="text-lg font-medium text-primary/80 flex items-center justify-center h-full bg-primary/5 rounded-md border border-primary/20">
+                      Coming Soon
+                    </p>
+                  )}
+                </div>
+
+                {project.description && (
+                  <CardDescription className="line-clamp-3 text-lg leading-relaxed min-h-[72px]">
                     {project.description}
                   </CardDescription>
-                ) : null}
-                {project.Technologies && project.Technologies.length > 0 ? (
-                  <ul className="mt-3 flex flex-wrap gap-3">
+                )}
+
+                {project.Technologies && project.Technologies.length > 0 && (
+                  <ul className="flex flex-wrap gap-3">
                     {project.Technologies.map((tech) => {
                       const Icon = getTechIcon(tech);
                       return (
