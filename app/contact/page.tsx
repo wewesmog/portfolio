@@ -13,7 +13,7 @@ export default function Contact() {
 
             <div className="flex flex-col gap-2 w-full justify-between mt-10 text-xl">
                <div className="flex gap-2 items-center">
-               <FaEnvelope />: <p>wes@wesleymogaka.com</p></div>
+               <FaEnvelope />: <p>wesleymogaka@gmail.com</p></div>
                <div className="flex gap-2 items-center">
                <FaPhone />: <p>+254 722 345 678</p></div>
                <div className="flex gap-2 items-center">
