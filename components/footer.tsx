@@ -33,8 +33,8 @@ export default function Footer() {
             <p className="text-sm sm:text-base text-muted-foreground mt-1">Let’s build something useful and beautiful.</p>
           </div>
           <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-            <Button variant="outline" className="w-full sm:w-auto">Contact me</Button>
-            <Button variant="default" className="w-full sm:w-auto">See my work</Button>
+            <Button variant="outline" onClick={() => window.open('/contact', '_blank')} className="w-full sm:w-auto">Contact me</Button>
+            <Button variant="default" onClick={() => window.open('/projects', '_blank')} className="w-full sm:w-auto">See my work</Button>
           </div>
         </div>
 
