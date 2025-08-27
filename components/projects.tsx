@@ -55,9 +55,9 @@ export default function Projects({
               </div>
               <CardHeader className="space-y-1">
                 <CardTitle className="font-heading text-3xl font-extrabold flex items-center gap-2 mb-2 text-gray-700">
-                  {project.name}
+                  {project.name}<br />  
                   <span className="text-lg text-gray-500">
-                    - {project.title}
+                    {project.title}
                   </span>
                 </CardTitle>
                 {project.link ? (
