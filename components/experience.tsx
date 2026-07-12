@@ -82,7 +82,7 @@ export default function Experience() {
       <SectionHeader
         id="experience-heading"
         title="Experience"
-        description="A decade in lifecycle and CVM before building AI products on the same problems."
+        description="A decade in lifecycle and CVM before building AI products on the same."
       />
 
       <Tabs

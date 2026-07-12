@@ -17,7 +17,7 @@ export function LabBanner() {
               {site.lab.name} — blog & lab
             </p>
             <p className="mt-0.5 max-w-md text-sm text-muted-foreground">
-              {site.lab.tagline}. Echo, CVM Copilot, and essays on the new lifecycle stack.
+              {site.lab.tagline}.
             </p>
           </div>
         </div>

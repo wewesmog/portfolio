@@ -21,8 +21,8 @@ export default function Hero() {
         </h1>
         <p className="max-w-xl text-base leading-relaxed text-muted-foreground">
           {site.description} I combine a decade in CVM and lifecycle with
-          hands-on engineering — LangGraph, FastAPI, Next.js — to ship tools
-          employers and partners can evaluate, not just pitch decks.
+          hands-on engineering - LangGraph, FastAPI, Next.js - to ship tools
+          that help teams unlock customer value.
         </p>
         <div className="flex flex-wrap gap-2 pt-1">
           <Button asChild size="default">
