@@ -1,24 +1,15 @@
-// all projects page
+import ProjectsComponent from "@/components/projects"
+import { SectionHeader } from "@/components/section-header"
+import { projects } from "@/app/data/projects_data"
 
-import { projects } from "@/app/data/projects_data";
-
-
-
-import ProjectsComponent from "@/components/projects";
-
-
-export default function Projects() {
-    
-
-    return (
-        <div>
-         
-          <h1 className="text-6xl font-extrabold mb-6 mt-10">My Best Works<span className="text-primary mb-2">.</span>
-          </h1>
-              <ProjectsComponent ProjectsToShow={projects} showTitle={false} />
-        </div>
-       
-       
-    );
-
+export default function ProjectsPage() {
+  return (
+    <div className="space-y-6 py-8">
+      <SectionHeader
+        title="Projects"
+        description="AI for customer engagement — lab experiments and shipped products."
+      />
+      <ProjectsComponent ProjectsToShow={projects} showTitle={false} />
+    </div>
+  )
 }

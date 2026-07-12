@@ -1,51 +1,59 @@
-// footer component
+import Link from "next/link"
+import { ArrowUpRight } from "lucide-react"
 
-import Link from "next/link";
-import { FaLinkedin, FaGithub, FaTwitter, FaInstagram,  } from "react-icons/fa";
-import { Button } from "./ui/button";
-import { Separator } from "./ui/separator";
-
+import { site } from "@/lib/site"
+import { Button } from "./ui/button"
 
 export default function Footer() {
   return (
-    <footer className="w-full mt-20 border-t">
-      <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-8">
-        {/* Top row: links and socials */}
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-          <nav className="flex flex-wrap gap-x-6 gap-y-3 text-base sm:text-lg font-medium">
-            <Link href="/" className="hover:underline underline-offset-4">Home</Link>
-            <Link href="/projects" className="hover:underline underline-offset-4">Projects</Link>
-            <Link href="/#story" className="hover:underline underline-offset-4">About</Link>
-            <Link href="/contact" className="hover:underline underline-offset-4">Contact</Link>
-          </nav>
-
-          {/* Socials (optional) */}
-          {/* <div className="flex items-center gap-4 text-xl">
-            <Link href="/"><FaLinkedin /></Link>
-            <Link href="/"><FaGithub /></Link>
-            <Link href="/"><FaTwitter /></Link>
-            <Link href="/"><FaInstagram /></Link>
-          </div> */}
+    <footer className="border-t border-border pt-8">
+      <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <p className="font-heading text-sm font-semibold">{site.name}</p>
+          <p className="mt-1 max-w-xs text-sm text-muted-foreground">{site.tagline}</p>
         </div>
+        <nav className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted-foreground">
+          <Link href="/#projects" className="hover:text-foreground">
+            Work
+          </Link>
+          <Link href="/contact" className="hover:text-foreground">
+            Contact
+          </Link>
+          <Link
+            href={site.lab.url}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1 hover:text-primary"
+          >
+            {site.lab.name}
+            <ArrowUpRight className="h-3 w-3" />
+          </Link>
+          <Link
+            href={site.linkedin}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-foreground"
+          >
+            LinkedIn
+          </Link>
+        </nav>
+      </div>
 
-        {/* CTA card */}
-        <div className="mt-8 rounded-xl border bg-card p-4 sm:p-6 flex flex-col gap-4 sm:gap-5 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h2 className="font-heading text-2xl sm:text-3xl font-extrabold">Interested in working together?</h2>
-            <p className="text-sm sm:text-base text-muted-foreground mt-1">Let’s build something useful and beautiful.</p>
-          </div>
-          <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-            <Button variant="outline" className="w-full sm:w-auto">Contact me</Button>
-            <Button variant="default" className="w-full sm:w-auto">See my work</Button>
-          </div>
-        </div>
-
-        {/* Bottom row */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-muted-foreground">
-          <p>© 2025 Wesley Mogaka. All rights reserved.</p>
-          {/* <p>Built with Next.js and Tailwind.</p> */}
+      <div className="mt-6 flex flex-col gap-3 rounded-xl border border-border/80 bg-card p-4 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-sm font-medium">Open to roles and build partnerships.</p>
+        <div className="flex gap-2">
+          <Button asChild size="sm" variant="outline">
+            <Link href="/contact">Contact</Link>
+          </Button>
+          <Button asChild size="sm">
+            <Link href="/#projects">See work</Link>
+          </Button>
         </div>
       </div>
+
+      <p className="mt-6 text-xs text-muted-foreground">
+        © {new Date().getFullYear()} {site.name}
+      </p>
     </footer>
   )
 }

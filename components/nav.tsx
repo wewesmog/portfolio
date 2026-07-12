@@ -1,78 +1,89 @@
-"use client";
-import Link from "next/link";
-import { Menu, X, MessageSquareText } from "lucide-react";
-import { Button } from "./ui/button";
-import React from "react";
+"use client"
 
+import Link from "next/link"
+import { ArrowUpRight, Menu, X } from "lucide-react"
+import React from "react"
 
+import { site } from "@/lib/site"
+import { Button } from "./ui/button"
+
+const links = [
+  { label: "Work", href: "/#projects" },
+  { label: "Experience", href: "/#experience" },
+  { label: "About", href: "/#story" },
+  { label: "Contact", href: "/contact" },
+]
 
 export default function Nav() {
-    const [open, setOpen] = React.useState(false);
-    return (
-        <div className="w-full">
-        <nav className="flex justify-between items-center w-full">
-            
-                {/* name */}
-                <div>
-                    {/* Home link */}
-               <Link href="/" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm">
-                 <p className="text-2xl font-extrabold transition-colors hover:text-primary/80">
-                   Wes<span className="text-primary">Mog</span>
-                 </p>
-               </Link>
-                </div>
-{/* links */} 
-{/* Mobile: show hamburger; Desktop: show nav links */}
-<div className="md:hidden">
-    <Button variant="outline" size="lg" aria-label="Open menu" onClick={() => setOpen(true)} className="transition-transform hover:scale-105">
-        <Menu />
-    </Button>
-</div>
-{open && (
-  <div className="fixed inset-0 z-50 md:hidden">
-    <div className="absolute inset-0 bg-black/40" onClick={() => setOpen(false)} />
-    <div className="absolute left-0 top-0 h-full w-72 bg-background shadow-lg p-6 flex flex-col gap-4">
-      <div className="flex items-center justify-between mb-2">
-        <div className="flex items-center gap-2">
-                    {/* Home link */}
-               <Link href="/"><p className="text-2xl font-extrabold">Wes<span className="text-primary">Mog</span></p></Link>
-                </div> 
-        <Button variant="ghost" size="icon" aria-label="Close menu" onClick={() => setOpen(false)}>
-          <X className="h-5 w-5" />
-        </Button>
-      </div>
-      <Link href="/" onClick={() => setOpen(false)} className="text-lg hover:text-primary">Home</Link>
-      <Link href="/projects" onClick={() => setOpen(false)} className="text-lg hover:text-primary">Projects</Link>
-      <Link href="/#story" onClick={() => setOpen(false)} className="text-lg hover:text-primary">About</Link>
-      <Link href="/contact" onClick={() => setOpen(false)} className="text-lg hover:text-primary">Contact</Link>
-    </div>
-  </div>
-)}  
-                <div className="hidden md:flex gap-6 text-xl font-semibold items-center">
-                <Link href="/" className="hover:underline underline-offset-4 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm">Home</Link>
-                <Link href="/projects" className="hover:underline underline-offset-4 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm">Projects</Link>
-                <Link href="/#story" className="hover:underline underline-offset-4 hover:text-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-sm">About</Link>
-                </div>
+  const [open, setOpen] = React.useState(false)
 
-                {/* contact */}
-                <div className="hidden md:block">
-                <Link href="/contact" className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-full inline-flex">
-                  <MessageSquareText className="w-10 h-10 bg-gray-900 text-white rounded-full p-2 transition hover:bg-gray-800 hover:scale-105" />
-                </Link>
-                </div>
-               
-        </nav>
-        {/* Mobile slide-down menu that pushes content */}
-        <div className={`md:hidden overflow-hidden transition-[max-height] duration-300 ${open ? "max-h-80" : "max-h-0"}`}>
-          <div className="border-t border-border px-4 py-4 flex flex-col gap-4 text-lg bg-background">
-            <Link href="/" onClick={() => setOpen(false)} className="hover:text-primary">Home</Link>
-            <Link href="/projects" onClick={() => setOpen(false)} className="hover:text-primary">Projects</Link>
-            <Link href="/#story" onClick={() => setOpen(false)} className="hover:text-primary">About</Link>
-            <Link href="/contact" onClick={() => setOpen(false)} className="inline-flex items-center gap-2 hover:text-primary">
-              <MessageSquareText className="h-5 w-5" /> Contact
+  return (
+    <nav className="relative flex items-center justify-between gap-4">
+      <Link
+        href="/"
+        className="font-heading text-lg font-semibold tracking-tight transition-colors hover:text-primary"
+      >
+        {site.shortName}
+        <span className="text-primary">.</span>
+      </Link>
+
+      <div className="hidden items-center gap-1 md:flex">
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+          >
+            {link.label}
+          </Link>
+        ))}
+        <Link
+          href={site.lab.url}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-sm font-medium text-primary transition-colors hover:bg-primary/10"
+        >
+          {site.lab.name}
+          <ArrowUpRight className="h-3.5 w-3.5" />
+        </Link>
+      </div>
+
+      <Button
+        variant="outline"
+        size="icon"
+        className="md:hidden"
+        aria-label={open ? "Close menu" : "Open menu"}
+        onClick={() => setOpen((v) => !v)}
+      >
+        {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+      </Button>
+
+      {open ? (
+        <div className="absolute left-0 right-0 top-full border-b border-border bg-background/95 px-4 py-4 backdrop-blur md:hidden">
+          <div className="flex flex-col gap-1">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-3 py-2 text-sm font-medium hover:bg-muted"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href={site.lab.url}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setOpen(false)}
+              className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-primary hover:bg-primary/10"
+            >
+              {site.lab.name}
+              <ArrowUpRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </div>
-        </div>
-    )
+      ) : null}
+    </nav>
+  )
 }
