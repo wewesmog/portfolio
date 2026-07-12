@@ -6,6 +6,7 @@ import { ArrowUpRight } from "lucide-react"
 import { projects, type Project } from "@/app/data/projects_data"
 import { ProjectIllustration } from "@/components/project-illustrations"
 import { SectionHeader } from "@/components/section-header"
+import { getProjectHref, getProjectLinkLabel, isProjectExternal } from "@/lib/project-links"
 import {
   Card,
   CardDescription,
@@ -34,16 +35,14 @@ export default function Projects({
         <SectionHeader
           id="projects-heading"
           title="Selected work"
-          description="AI products aimed at lifecycle, retention and customer engagement — including experiments from the CVM×AI lab."
+          description="CVM×AI lab experiments plus shipped products in learning and engagement."
         />
       ) : null}
 
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {list.map((project) => {
-          const href = project.link?.startsWith("http")
-            ? project.link
-            : `/${project.id}/projects`
-          const external = project.link?.startsWith("http")
+          const href = getProjectHref(project)
+          const external = isProjectExternal(project)
 
           return (
             <Card
@@ -91,7 +90,7 @@ export default function Projects({
                     </ul>
                   ) : null}
                   <span className="inline-flex items-center gap-1 text-xs font-medium text-primary">
-                    {external ? "View on CVM×AI" : "Case study"}
+                    {getProjectLinkLabel(project)}
                     <ArrowUpRight className="h-3 w-3" />
                   </span>
                 </CardHeader>

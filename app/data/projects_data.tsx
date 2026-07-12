@@ -8,6 +8,8 @@ export type Project = {
   cover: ProjectCover
   image?: string
   link?: string
+  linkLabel?: string
+  slug?: string
   lab?: boolean
   about?: string
   problemStatement?: string
@@ -119,7 +121,8 @@ export const projects: Project[] = [
       "Gamified learning with dynamic, adaptive trivia — LangGraph-generated questions that keep learners engaged.",
     status: "live",
     cover: "triviapals",
-    link: "https://github.com/yourname/trivia-pals",
+    link: "https://triviapals.com",
+    linkLabel: "triviapals.com",
     about:
       "Trivia Pals generates fresh, level-appropriate questions on the fly. LangGraph orchestrates generation, validation and scoring; difficulty adapts to mastery gaps while streaks and XP sustain motivation.",
     problemStatement:
@@ -164,7 +167,7 @@ export const projects: Project[] = [
       "A Telegram tutor bot — LangGraph orchestrates lessons, quizzes, hints and progress tracking in chat.",
     status: "pilot",
     cover: "mwalimu",
-    link: "https://github.com/yourname/mwalimu",
+    slug: "mwalimu",
     about:
       "Mwalimu is an AI tutor on Telegram. Learners message the bot to study a topic, get adaptive quizzes, receive hints and explanations, and track mastery over time — all driven by a LangGraph state machine for auditable, step-by-step tutoring flows.",
     problemStatement:
